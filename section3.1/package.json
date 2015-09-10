@@ -1,0 +1,14 @@
+{
+  "name": "qr_gen",
+  "version": "1.0.0",
+  "description": "This app will demonstrate the usage of npm",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Li Zhang",
+  "license": "ISC",
+  "dependencies": {
+    "qr-image": "^3.1.0"
+  }
+}
