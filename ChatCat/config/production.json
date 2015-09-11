@@ -4,7 +4,7 @@
   "fb": {
     "appID": "899510333463631",
     "appSecret": "5ad70d4bbac8a34f14204eb67e540f34",
-    "callbackURL": "http://localhost:9000/auth/facebook/callback"
+    "callbackURL": "http://lizhangchat.herokuapp.com/auth/facebook/callback"
   },
-  "host":""
+  "host":"http://lizhangchat.herokuapp.com"
 }
