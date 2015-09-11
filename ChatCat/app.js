@@ -8,6 +8,7 @@ var ConnectMongo = require('connect-mongo')(session);
 var mongoose = require('mongoose').connect(config.dbURL);
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
+var rooms = [];
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('hogan-express'));
@@ -35,9 +36,17 @@ app.use(passport.session());
 
 require('./auth/passportAuth.js')(passport, FacebookStrategy, config, mongoose);
 
-require('./routes/routes.js')(express, app, passport);
+require('./routes/routes.js')(express, app, passport, config, rooms);
 
-app.listen(9000, function (argument) {
-  console.log("ChatCAT Working on Port 3000");
+// app.listen(9000, function (argument) {
+//   console.log("ChatCAT Working on Port 9000");
+//   console.log("Mode: " + env);
+// });
+app.set('port', process.env.PORT || 9000);
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
+require('./socket/socket.js')(io, rooms);
+server.listen(app.get('port'), function () {
+  console.log('ChatCAT on Port : ' + app.get('port'));
   console.log("Mode: " + env);
-});
+})
