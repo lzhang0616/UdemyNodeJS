@@ -1,0 +1,20 @@
+{
+  "name": "photogrid",
+  "version": "0.0.1",
+  "description": "A photo management website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Photo",
+    "sharing"
+  ],
+  "author": "Li Zhang",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.4.3",
+    "hogan-express": "^0.5.2",
+    "socket.io": "^1.0.5"
+  }
+}
