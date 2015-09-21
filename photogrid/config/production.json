@@ -1,0 +1,6 @@
+{
+  "host":"http://localhost:9000",
+  "S3AccessKey":"AKIAI22OYB33YFCYHTVQ",
+  "S3Secret":"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",
+  "S3Bucket":"lzphotogrid"
+}
