@@ -1,2 +1,4 @@
 ChatCat/config/**
+ChatCat/node_modules/**
 photogrid/config/**
+photogrid/node_modules/**
